@@ -1,0 +1,152 @@
+body {
+  background-image: url('/src/img/fundo-site.jpg');
+  background-repeat: no-repeat; /*comando "repeat" faz q a imagem de fundo não se repita várias vezes*/
+  background-size: cover; /*Comando q ajuda a centralizar, cobrir e mostrar a totalidade da imagens */
+  background-position: center; /*posiciona a imagem no centro da tela*/
+
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  color: #f3f3f3;
+
+  display: flex; /*normalmente usado no elemento pai para redimencionar os elementos filhos */
+  justify-content: center; /*tanto este comando quanto o align são comandos q apenas funcionam quando o elemento pai é display flex*/
+  align-items: center;
+  min-height: 100vh; /*essa altura com vh normalmente diz que o tamanho será 100% ao body não obstante, certos problemas de responsividade podem acontecer se esse height não for "min-height"*/
+  padding: 30px;
+}
+
+.card {
+  background-color: #070d12;
+  width: 370px;
+  border: 2px solid #e126d9;
+  border-radius: 10px;
+  overflow: hidden; /*vai esconder qualquer coisa que estiver transbordando esta class*/
+}
+
+.bodyUp {
+  padding-top: 20px;
+/*text-align: center;*/
+  display: flex; /*normalmente o display flex ele vem no formato padrao "flex direction ROW vulgo: em linha para mudar isso usa-se "flex-direction""*/
+  flex-direction: column;
+  align-items: center; /*comando que normalmente alinha e arruma o tamanho de certas propriedades HORIZONTALMENTE, pois o flex direction está:column, se o flex-direction estivesse em row e vc usa-se o align-items:center ele iria centralizar VERTICALMENTE.*/
+  gap: 10px; /*propriedade flex que serve como um margin top e botton*/
+}
+
+.bodyUp img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: 4px solid #02d08f;
+}
+
+.bodyUp .name {
+  font-size: 26px;
+}
+
+.bodyUp .office {
+  font-size: 20px;
+  color: #b8bbc5;
+}
+
+.bodyLow {
+  margin-top: 15px;
+}
+
+.bodyLow .tabs {
+  display: flex;
+}
+
+.tabs .aba img {
+  width: 30px;
+ }
+
+ .tabs .aba {
+  width: 50%; /*vai dividir o tamanho/espaçamento da div no meio*/
+/*text-align: center;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+ }
+
+.aba.selecionado {
+  background-color: #262626;
+}
+
+.bodyLow .infoTabs {
+  background-color: #262626;
+}
+
+.aba:hover {
+  background-color: #414141;
+}
+
+.aba.selecinado:hover {
+  background-color: #414141;
+}
+
+.infoTabs .informacao {
+  min-height: 260px;
+  padding: 15px;
+  text-align: justify;
+  display: none;
+}
+
+.informacao.selecionado {
+  display: block;
+}
+
+.informacao .subTitle {
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.informacao .descricao {
+  font-size: 20px;
+  max-height: 180px;
+  overflow-y: scroll;/*x*/
+  padding-right: 15px;
+}
+
+.descricao span {
+  color: #02d08f;
+}
+
+.redesSociais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.redesSociais li a {
+  display: block; /*pra conseguir mexer no width de uma ancora*/
+  width: 250px;
+  color: #f3f3f3;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.redesSociais .curriculo {
+  background-color: #06c185;
+}
+
+.redesSociais .linkedin {
+  background-color: #1d87bd;
+}
+
+.redesSociais .github {
+  background-color: #545454;
+}
+
+.redesSociais a:hover {
+  opacity: 0.8;
+  border-radius: 2rem;
+  font-weight: 900;
+}
